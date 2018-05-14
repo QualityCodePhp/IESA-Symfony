@@ -14,5 +14,6 @@
  - https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
  - https://en.wikipedia.org/wiki/Software_design_pattern
  - https://fr.wikipedia.org/wiki/PHP
+ - https://afup.org/home
  
  
