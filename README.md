@@ -1,7 +1,7 @@
 # IESA-Symfony
 
 
-## soucis mysql 18.04
+## Soucis Authentification MySQL dans la VM
 
 - sudo mysql -uroot
 - ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'VOTRE PASSWORD';
