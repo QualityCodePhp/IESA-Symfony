@@ -15,5 +15,7 @@
  - https://en.wikipedia.org/wiki/Software_design_pattern
  - https://fr.wikipedia.org/wiki/PHP
  - https://afup.org/home
+ - https://www.phpmetrics.org/
+ - https://phpqa.io/
  
  
