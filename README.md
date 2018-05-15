@@ -1,5 +1,9 @@
 # IESA-Symfony
 
+## Création du projet
+
+ - composer create-project symfony/skeleton mywebsite
+ - composer require server --dev
 
 ## Ressources
 
@@ -18,5 +22,3 @@
  - https://www.phpmetrics.org/
  - https://phpqa.io/
  - https://www.php-fig.org/
- 
- 
