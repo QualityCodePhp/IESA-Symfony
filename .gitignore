@@ -1,11 +1,11 @@
 
 ###> symfony/framework-bundle ###
-/app/.env
-/app/public/bundles/
-/app/var/
-/app/vendor/
+/.env
+/public/bundles/
+/var/
+/vendor/
 ###< symfony/framework-bundle ###
 
 ###> symfony/web-server-bundle ###
-/app/.web-server-pid
+/.web-server-pid
 ###< symfony/web-server-bundle ###
