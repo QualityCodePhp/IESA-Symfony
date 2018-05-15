@@ -19,7 +19,7 @@ class Feature
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idFeature;
+    private $id;
 
     /**
      * @var string|null

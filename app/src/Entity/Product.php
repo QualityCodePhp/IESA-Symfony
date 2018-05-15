@@ -19,7 +19,7 @@ class Product
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idProduct;
+    private $id;
 
     /**
      * @var string

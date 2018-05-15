@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Price
  *
- * @ORM\Table(name="price", indexes={@ORM\Index(name="id_product", columns={"id_product"})})
+ * @ORM\Table(name="price")
  * @ORM\Entity
  */
 class Price
@@ -19,7 +19,7 @@ class Price
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idPrice;
+    private $id;
 
     /**
      * @var float|null
@@ -41,16 +41,6 @@ class Price
      * @ORM\Column(name="end_date", type="date", nullable=false)
      */
     private $endDate;
-
-    /**
-     * @var \Product
-     *
-     * @ORM\ManyToOne(targetEntity="Product")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_product", referencedColumnName="id_product")
-     * })
-     */
-    private $idProduct;
 
 
 }

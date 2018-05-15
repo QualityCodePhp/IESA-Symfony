@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Address
  *
- * @ORM\Table(name="address", indexes={@ORM\Index(name="id_customer", columns={"id_customer"})})
+ * @ORM\Table(name="address")
  * @ORM\Entity
  */
 class Address
@@ -19,7 +19,7 @@ class Address
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idAddress;
+    private $id;
 
     /**
      * @var string|null
@@ -55,16 +55,5 @@ class Address
      * @ORM\Column(name="zicode", type="string", length=10, nullable=true)
      */
     private $zicode;
-
-    /**
-     * @var \Customer
-     *
-     * @ORM\ManyToOne(targetEntity="Customer")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_customer", referencedColumnName="id_customer")
-     * })
-     */
-    private $idCustomer;
-
 
 }

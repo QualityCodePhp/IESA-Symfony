@@ -5,21 +5,21 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Lead
+ * Customer
  *
- * @ORM\Table(name="lead")
+ * @ORM\Table(name="customer")
  * @ORM\Entity
  */
-class Lead
+class Customer
 {
     /**
      * @var int
      *
-     * @ORM\Column(name="id_lead", type="integer", nullable=false, options={"unsigned"=true})
+     * @ORM\Column(name="id_customer", type="integer", nullable=false, options={"unsigned"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idLead;
+    private $id;
 
     /**
      * @var string|null
@@ -57,11 +57,32 @@ class Lead
     private $email;
 
     /**
-     * @var int|null
+     * @var \DateTime
      *
-     * @ORM\Column(name="state", type="smallint", nullable=true)
+     * @ORM\Column(name="created_at", type="datetime", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
      */
-    private $state;
+    private $createdAt = 'CURRENT_TIMESTAMP';
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="updated_at", type="datetime", nullable=true)
+     */
+    private $updatedAt;
+
+    /**
+     * @var \DateTime|null
+     *
+     * @ORM\Column(name="deleted_at", type="datetime", nullable=true)
+     */
+    private $deletedAt;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="number_orders", type="smallint", nullable=false, options={"unsigned"=true})
+     */
+    private $numberOrders = '0';
 
 
 }
