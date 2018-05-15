@@ -5,6 +5,13 @@
  - composer create-project symfony/skeleton mywebsite
  - composer require server --dev
 
+## Soucis Authentification MySQL dans la VM
+
+- sudo mysql -uroot
+- ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'VOTRE PASSWORD';
+- FLUSH PRIVILEGES;
+- exit
+
 ## Ressources
 
  - VM https://drive.google.com/open?id=1O_YKFpdyk7xeocGAu63-nprFD7JDi46e
