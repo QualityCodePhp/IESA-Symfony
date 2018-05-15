@@ -16,6 +16,10 @@
  - bin/console make:migration
  - bin/console doctrine:migrations:migrate
  - en cas de modification(s) manuelle(s) php bin/console make:entity --regenerate
+ 
+## Ajout des relations
+ - https://symfony.com/doc/current/doctrine/associations.html
+ - https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/association-mapping.html#many-to-many-bidirectional
 
 ## Soucis Authentification MySQL dans la VM
 
