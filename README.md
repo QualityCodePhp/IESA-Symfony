@@ -1,5 +1,9 @@
 # IESA-Symfony
 
+## Création du projet
+
+ - composer create-project symfony/skeleton mywebsite
+ - composer require server --dev
 
 ## Soucis Authentification MySQL dans la VM
 
