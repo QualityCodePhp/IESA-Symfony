@@ -21,6 +21,9 @@
  - https://symfony.com/doc/current/doctrine/associations.html
  - https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/association-mapping.html#many-to-many-bidirectional
 
+## Ajout de datafixtures
+ - https://github.com/hautelook/AliceBundle
+
 ## Soucis Authentification MySQL dans la VM
 
 - sudo mysql -uroot
