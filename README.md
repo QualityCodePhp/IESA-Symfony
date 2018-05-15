@@ -6,6 +6,9 @@
  - composer require server --dev
  
 ## Création database
+ - https://symfony.com/doc/current/doctrine.html
+ - composer require doctrine
+ - composer maker --dev
  - bin/console doctrine:database:create
 
 ## Soucis Authentification MySQL dans la VM
