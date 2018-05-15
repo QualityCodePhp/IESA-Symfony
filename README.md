@@ -15,7 +15,7 @@
  - bin/console make:entity
  - bin/console make:migration
  - bin/console doctrine:migrations:migrate
- - en cas de modification manuel php bin/console make:entity --regenerate
+ - en cas de modification(s) manuelle(s) php bin/console make:entity --regenerate
 
 ## Soucis Authentification MySQL dans la VM
 
