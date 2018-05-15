@@ -4,6 +4,9 @@
 
  - composer create-project symfony/skeleton mywebsite
  - composer require server --dev
+ 
+## Création database
+ - bin/console doctrine:database:create
 
 ## Soucis Authentification MySQL dans la VM
 
