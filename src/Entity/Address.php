@@ -56,4 +56,22 @@ class Address
      */
     private $zicode;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Customer", inversedBy="adresses")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $customer;
+
+    public function getCustomer(): ?Customer
+    {
+        return $this->customer;
+    }
+
+    public function setCustomer(?Customer $customer): self
+    {
+        $this->customer = $customer;
+
+        return $this;
+    }
+
 }

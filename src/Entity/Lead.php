@@ -63,5 +63,28 @@ class Lead
      */
     private $state;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Customer", mappedBy="lead", cascade={"persist", "remove"})
+     */
+    private $customer;
+
+    public function getCustomer(): ?Customer
+    {
+        return $this->customer;
+    }
+
+    public function setCustomer(?Customer $customer): self
+    {
+        $this->customer = $customer;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newLead = $customer === null ? null : $this;
+        if ($newLead !== $customer->getLead()) {
+            $customer->setLead($newLead);
+        }
+
+        return $this;
+    }
+
 
 }
