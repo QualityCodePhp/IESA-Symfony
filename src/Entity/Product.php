@@ -17,7 +17,7 @@ class Product
     /**
      * @var int
      *
-     * @ORM\Column(name="id_product", type="integer", nullable=false, options={"unsigned"=true})
+     * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
