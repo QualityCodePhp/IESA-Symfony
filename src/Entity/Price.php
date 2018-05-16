@@ -2,13 +2,19 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Price
  *
  * @ORM\Table(name="price")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\PriceRepository")
+ *
+ * @ApiResource
+ *
  */
 class Price
 {
@@ -47,6 +53,16 @@ class Price
      * @ORM\JoinColumn(nullable=false)
      */
     private $product;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductOrder", mappedBy="orderedProducts")
+     */
+    private $productOrders;
+
+    public function __construct()
+    {
+        $this->productOrders = new ArrayCollection();
+    }
 
     public function getProduct(): ?Product
     {
@@ -97,6 +113,37 @@ class Price
     public function setEndDate(\DateTimeInterface $endDate): self
     {
         $this->endDate = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|ProductOrder[]
+     */
+    public function getProductOrders(): Collection
+    {
+        return $this->productOrders;
+    }
+
+    public function addProductOrder(ProductOrder $productOrder): self
+    {
+        if (!$this->productOrders->contains($productOrder)) {
+            $this->productOrders[] = $productOrder;
+            $productOrder->setOrderedProducts($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProductOrder(ProductOrder $productOrder): self
+    {
+        if ($this->productOrders->contains($productOrder)) {
+            $this->productOrders->removeElement($productOrder);
+            // set the owning side to null (unless already changed)
+            if ($productOrder->getOrderedProducts() === $this) {
+                $productOrder->setOrderedProducts(null);
+            }
+        }
 
         return $this;
     }

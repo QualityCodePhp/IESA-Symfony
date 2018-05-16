@@ -3,12 +3,16 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Address
  *
  * @ORM\Table(name="address")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\AddressRepository")
+ *
+ * @ApiResource
+ *
  */
 class Address
 {
@@ -57,6 +61,8 @@ class Address
     private $zipcode;
 
     /**
+     * @var Customer
+     *
      * @ORM\ManyToOne(targetEntity="App\Entity\Customer", inversedBy="adresses")
      * @ORM\JoinColumn(nullable=false)
      */

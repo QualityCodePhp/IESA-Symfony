@@ -3,12 +3,16 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Lead
  *
  * @ORM\Table(name="lead")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\LeadRepository")
+ *
+ * @ApiResource
+ *
  */
 class Lead
 {

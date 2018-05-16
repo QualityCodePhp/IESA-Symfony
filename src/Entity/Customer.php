@@ -5,12 +5,14 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Customer
  *
  * @ORM\Table(name="customer")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\CustomerRepository")
+ * @ApiResource
  */
 class Customer
 {
@@ -87,16 +89,19 @@ class Customer
     private $numberOrders = '0';
 
     /**
+     * @var Collection|Address[]
      * @ORM\OneToMany(targetEntity="App\Entity\Address", mappedBy="customer", orphanRemoval=true)
      */
     private $adresses;
 
     /**
+    * @var Collection|Order[]
      * @ORM\OneToMany(targetEntity="App\Entity\Order", mappedBy="customer", orphanRemoval=true)
      */
     private $orders;
 
     /**
+    * @var Lead
      * @ORM\OneToOne(targetEntity="App\Entity\Lead", inversedBy="customer", cascade={"persist", "remove"})
      */
     private $lead;
