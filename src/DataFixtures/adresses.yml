@@ -1,2 +1,8 @@
-App/Entity/Adress:
-    adresse_{1..10}:
+App\Entity\Address:
+    address_{1..10}:
+        line1: <streetAddress()>
+        line2: <streetAddress()>
+        line3: <streetAddress()>
+        country: <country()>
+        zipcode: <postcode()>
+        customer: '@customer_*'

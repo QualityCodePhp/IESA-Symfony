@@ -60,5 +60,46 @@ class Price
         return $this;
     }
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getValue(): ?float
+    {
+        return $this->value;
+    }
+
+    public function setValue(?float $value): self
+    {
+        $this->value = $value;
+
+        return $this;
+    }
+
+    public function getBeginDate(): ?\DateTimeInterface
+    {
+        return $this->beginDate;
+    }
+
+    public function setBeginDate(\DateTimeInterface $beginDate): self
+    {
+        $this->beginDate = $beginDate;
+
+        return $this;
+    }
+
+    public function getEndDate(): ?\DateTimeInterface
+    {
+        return $this->endDate;
+    }
+
+    public function setEndDate(\DateTimeInterface $endDate): self
+    {
+        $this->endDate = $endDate;
+
+        return $this;
+    }
+
 
 }

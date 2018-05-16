@@ -52,9 +52,9 @@ class Address
     /**
      * @var string|null
      *
-     * @ORM\Column(name="zicode", type="string", length=10, nullable=true)
+     * @ORM\Column(name="zipcode", type="string", length=10, nullable=true)
      */
-    private $zicode;
+    private $zipcode;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Customer", inversedBy="adresses")
@@ -70,6 +70,71 @@ class Address
     public function setCustomer(?Customer $customer): self
     {
         $this->customer = $customer;
+
+        return $this;
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getLine1(): ?string
+    {
+        return $this->line1;
+    }
+
+    public function setLine1(?string $line1): self
+    {
+        $this->line1 = $line1;
+
+        return $this;
+    }
+
+    public function getLine2(): ?string
+    {
+        return $this->line2;
+    }
+
+    public function setLine2(?string $line2): self
+    {
+        $this->line2 = $line2;
+
+        return $this;
+    }
+
+    public function getLine3(): ?string
+    {
+        return $this->line3;
+    }
+
+    public function setLine3(?string $line3): self
+    {
+        $this->line3 = $line3;
+
+        return $this;
+    }
+
+    public function getCountry(): ?string
+    {
+        return $this->country;
+    }
+
+    public function setCountry(?string $country): self
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    public function getZipcode(): ?string
+    {
+        return $this->zipcode;
+    }
+
+    public function setZipcode(?string $zipcode): self
+    {
+        $this->zipcode = $zipcode;
 
         return $this;
     }

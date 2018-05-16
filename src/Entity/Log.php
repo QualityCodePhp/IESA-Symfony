@@ -49,5 +49,58 @@ class Log
      */
     private $data;
 
+    public function getIdLog(): ?int
+    {
+        return $this->idLog;
+    }
+
+    public function getLogAt(): ?\DateTimeInterface
+    {
+        return $this->logAt;
+    }
+
+    public function setLogAt(\DateTimeInterface $logAt): self
+    {
+        $this->logAt = $logAt;
+
+        return $this;
+    }
+
+    public function getActionName(): ?int
+    {
+        return $this->actionName;
+    }
+
+    public function setActionName(?int $actionName): self
+    {
+        $this->actionName = $actionName;
+
+        return $this;
+    }
+
+    public function getTableName(): ?string
+    {
+        return $this->tableName;
+    }
+
+    public function setTableName(?string $tableName): self
+    {
+        $this->tableName = $tableName;
+
+        return $this;
+    }
+
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    public function setData($data): self
+    {
+        $this->data = $data;
+
+        return $this;
+    }
+
 
 }
