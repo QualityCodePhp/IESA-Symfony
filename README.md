@@ -1,5 +1,7 @@
 # IESA-Symfony
 
+- https://speakerdeck.com/dunglas/symfony-4-run-through
+
 ## Création du projet
 
  - composer create-project symfony/skeleton mywebsite
@@ -20,6 +22,9 @@
 ## Ajout des relations
  - https://symfony.com/doc/current/doctrine/associations.html
  - https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/association-mapping.html#many-to-many-bidirectional
+
+## Ajout de datafixtures
+ - https://github.com/hautelook/AliceBundle
 
 ## Soucis Authentification MySQL dans la VM
 
