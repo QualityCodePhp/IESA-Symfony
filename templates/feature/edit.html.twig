@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<title>Edit Feature</title>
+
+{% block body %}
+    <h1>Edit Feature</h1>
+
+    {{ include('feature/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('feature_index') }}">back to list</a>
+
+    {{ include('feature/_delete_form.html.twig') }}
+{% endblock %}

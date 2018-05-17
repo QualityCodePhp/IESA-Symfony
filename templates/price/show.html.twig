@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<title>Price</title>
+
+{% block body %}
+    <h1>Price</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ price.id }}</td>
+            </tr>
+            <tr>
+                <th>Value</th>
+                <td>{{ price.value }}</td>
+            </tr>
+            <tr>
+                <th>BeginDate</th>
+                <td>{{ price.beginDate ? price.beginDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>EndDate</th>
+                <td>{{ price.endDate ? price.endDate|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('price_index') }}">back to list</a>
+
+    <a href="{{ path('price_edit', {'id': price.id}) }}">edit</a>
+
+    {{ include('price/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<title>Price index</title>
+
+{% block body %}
+    <h1>Price index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Value</th>
+                <th>BeginDate</th>
+                <th>EndDate</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for price in prices %}
+            <tr>
+                <td>{{ price.id }}</td>
+                <td>{{ price.value }}</td>
+                <td>{{ price.beginDate ? price.beginDate|date('Y-m-d') : '' }}</td>
+                <td>{{ price.endDate ? price.endDate|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('price_show', {'id': price.id}) }}">show</a>
+                    <a href="{{ path('price_edit', {'id': price.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('price_new') }}">Create new</a>
+{% endblock %}

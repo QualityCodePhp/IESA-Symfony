@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<title>New Price</title>
+
+{% block body %}
+    <h1>Create new Price</h1>
+
+    {{ include('price/_form.html.twig') }}
+
+    <a href="{{ path('price_index') }}">back to list</a>
+{% endblock %}

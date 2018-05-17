@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<title>New Feature</title>
+
+{% block body %}
+    <h1>Create new Feature</h1>
+
+    {{ include('feature/_form.html.twig') }}
+
+    <a href="{{ path('feature_index') }}">back to list</a>
+{% endblock %}

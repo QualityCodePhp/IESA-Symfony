@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<title>Lead index</title>
+
+{% block body %}
+    <h1>Lead index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Birthday</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>State</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for lead in leads %}
+            <tr>
+                <td>{{ lead.id }}</td>
+                <td>{{ lead.firstname }}</td>
+                <td>{{ lead.lastname }}</td>
+                <td>{{ lead.birthday ? lead.birthday|date('Y-m-d') : '' }}</td>
+                <td>{{ lead.phone }}</td>
+                <td>{{ lead.email }}</td>
+                <td>{{ lead.state }}</td>
+                <td>
+                    <a href="{{ path('lead_show', {'id': lead.id}) }}">show</a>
+                    <a href="{{ path('lead_edit', {'id': lead.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('lead_new') }}">Create new</a>
+{% endblock %}

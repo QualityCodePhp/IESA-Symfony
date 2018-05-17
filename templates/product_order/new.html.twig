@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<title>New ProductOrder</title>
+
+{% block body %}
+    <h1>Create new ProductOrder</h1>
+
+    {{ include('product_order/_form.html.twig') }}
+
+    <a href="{{ path('product_order_index') }}">back to list</a>
+{% endblock %}
