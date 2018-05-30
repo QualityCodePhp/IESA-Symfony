@@ -25,6 +25,7 @@
 
 ## Ajout de datafixtures
  - https://github.com/hautelook/AliceBundle
+ - https://knpuniversity.com/screencast/collections/many-to-many-fixtures
 
 ## Soucis Authentification MySQL dans la VM
 
